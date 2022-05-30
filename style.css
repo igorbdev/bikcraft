@@ -1,36 +1,125 @@
-* {
+/* layout geral da pagina */
+body {
+  margin: 0;
   font-family: Arial;
+  display: grid;
+  gap: 60px;
+  justify-items: center;
+  background-color: #f7f7f7;
 }
 
-h1 {
-  text-align: center;
+/* reset de margem e geral da fonte */
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  font-size: 20px;
 }
 
-div {
-  background-color: #111;
+a {
+  text-decoration: none;
+}
+
+/* max-width de 100% na imagem para não ficar com scrool laretal */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* layout do da imagem que fica no topo da página */
+.bikecraft {
+  margin-top: 60px;
+}
+
+/* layout do menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* layout dos itens do menu */
+.menu a {
+  text-decoration: none;
+  background-color: white;
+  padding: 15px 30px;
+  color: black;
   border-radius: 4px;
-  margin: 30px;
+}
+
+/* todo o conteúdo é dividido em 2 colunas com o máximo de 1000 pixels */
+.conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+}
+
+.introducao {
+  background-color: white;
+  padding: 40px;
+  text-align: right;
+  position: relative;
+  display: grid;
+  align-content: center;
+  gap: 20px;
+  justify-items: end;
+}
+
+/* detalhe criado apenas com css */
+.detalhe {
+  width: 60px;
+  height: 4px;
+  background-color: #ee2211;
+  position: absolute;
+  top: 30px;
+  right: -30px;
+}
+
+.introducao h1 {
+  font-size: 2em;
+}
+
+.introducao a {
+  background-color: #ee2211;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 4px;
+}
+
+/* layout do subtitulo */
+.subtitulo {
+  font-size: 64px;
+  color: #c6c6c6;
+  text-align: right;
+  padding: 40px;
+  align-self: center;
+}
+
+/* layout do grid ao lado do subtitulo */
+.vantagens {
+  background-color: white;
+  padding: 40px;
+}
+
+.vantagens-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 20px;
   padding: 20px;
 }
 
-h2 {
-  color: white;
-  margin: 0;
+.vantagens-item p {
+  grid-column: 2;
 }
 
-p {
-  color: #b2b2b2;
-  font-weight: bold;
-}
-
-span {
-  color: #febe01;
-}
-
-button {
-  font-weight: bold;
-  color: #332200;
-  padding: 10px;
-  border-radius: 4px;
-  background-color: #febe01;
+/* layout do rodapé */
+.rodape {
+  background-color: white;
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  text-align: center;
 }
