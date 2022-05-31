@@ -61,6 +61,7 @@ img {
   background-color: white;
   padding: 40px;
   text-align: right;
+  /* Position relative para o detalhe absolute respeitar o pai dele */
   position: relative;
   display: grid;
   align-content: center;
