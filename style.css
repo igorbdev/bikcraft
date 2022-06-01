@@ -15,11 +15,17 @@ h3,
 h4,
 p {
   margin: 0;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 a {
   text-decoration: none;
+}
+
+header {
+  display: grid;
+  justify-items: center;
+  gap: 60px;
 }
 
 /* max-width de 100% na imagem para não ficar com scrool laretal */
@@ -42,12 +48,18 @@ img {
 }
 
 /* layout dos itens do menu */
-.menu a {
+.menu li {
+  list-style: none;
   text-decoration: none;
   background-color: white;
   padding: 15px 30px;
   color: black;
+  border: 1px solid white;
   border-radius: 4px;
+}
+
+.menu li:hover {
+  border: 1px solid #900;
 }
 
 /* todo o conteúdo é dividido em 2 colunas com o máximo de 1000 pixels */
@@ -70,7 +82,8 @@ img {
 }
 
 /* detalhe criado apenas com css */
-.detalhe {
+.introducao::before {
+  content: "";
   width: 60px;
   height: 4px;
   background-color: #ee2211;
@@ -80,7 +93,7 @@ img {
 }
 
 .introducao h1 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 .introducao a {
@@ -90,13 +103,18 @@ img {
   border-radius: 4px;
 }
 
+.introducao a:hover {
+  background-color: #900;
+}
+
 /* layout do subtitulo */
 .subtitulo {
-  font-size: 64px;
+  font-size: 4rem;
   color: #c6c6c6;
   text-align: right;
   padding: 40px;
   align-self: center;
+  background-image: url(/img/onda.svg);
 }
 
 /* layout do grid ao lado do subtitulo */
@@ -110,6 +128,14 @@ img {
   grid-template-columns: auto 1fr;
   gap: 10px 20px;
   padding: 20px;
+}
+
+.vantagens-item:hover {
+  border-left: 4px solid red;
+}
+
+.vantagens-item:nth-child(odd) {
+  background-color: #f7f7f7;
 }
 
 .vantagens-item p {
