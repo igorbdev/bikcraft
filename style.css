@@ -150,3 +150,25 @@ img {
   box-sizing: border-box;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .conteudo {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+
+  .introducao {
+    text-align: right;
+    display: grid;
+    align-content: center;
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .introducao::before {
+    display: none;
+  }
+
+  .subtitulo {
+    text-align: center;
+}
