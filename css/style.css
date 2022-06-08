@@ -16,6 +16,23 @@ ul {
 /* Header Css */
 .header-bg {
   background-color: #000;
+  height: 100px;
+}
+
+.header {
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.header-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.header-menu a {
+  color: white;
 }
 
 /* Body Css */
