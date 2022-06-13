@@ -27,3 +27,8 @@ img {
   max-width: 100%;
   display: block;
 }
+
+/* Arredondar apenas as imagens jgp */
+img[src$=".jpg"] {
+  border-radius: 4px;
+}
