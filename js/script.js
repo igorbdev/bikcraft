@@ -23,3 +23,22 @@ function ativarProduto(parametro) {
 }
 
 parametros.forEach(ativarProduto);
+
+// Mostrar e esconder perguntas
+const pergunta = document.querySelectorAll(".perguntas button");
+
+function eventosPerguntas(pergunta) {
+  function mostrarPergunta(event) {
+    const p = event.currentTarget;
+    const controls = p.getAttribute("aria-controls");
+    const resposta = document.getElementById(controls);
+
+    resposta.classList.toggle("ativa");
+    const ativa = resposta.classList.contains("ativa");
+    p.setAttribute("aria-expanded", ativa);
+  }
+
+  pergunta.addEventListener("click", mostrarPergunta);
+}
+
+pergunta.forEach(eventosPerguntas);
